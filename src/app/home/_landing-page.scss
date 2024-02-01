@@ -1,0 +1,128 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/theme' as *;
+@use './mixins.scss' as *;
+@use './overrides.scss';
+.landing-page__illo {
+  max-width: 100%;
+}
+
+.landing-page__banner {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-07;
+  padding-left: $spacing-06;
+  margin-bottom: $spacing-09;
+  @include landing-page-background;
+}
+
+//row 2
+
+.landing-page__heading {
+  @include type-style('productive-heading-05');
+}
+.landing-page__r2 {
+  margin-top: rem(-40px);
+}
+.tabs-group-content {
+  padding: $spacing-10 $spacing-06;
+}
+
+.landing-page__subheading {
+  @include type-style('productive-heading-03');
+
+  font-weight: 600;
+}
+
+.landing-page__p {
+  @include type-style('productive-heading-03');
+  margin-top: $spacing-06;
+  margin-bottom: $spacing-08;
+
+  @include breakpoint-between((320px + 1), md) {
+    max-width: 75%;
+  }
+}
+
+.tabs-group {
+  background-color: $layer-01;
+}
+
+////row 3
+
+.landing-page__r3 {
+  padding-top: $spacing-09;
+  padding-bottom: $spacing-09;
+  padding-left: $spacing-06;
+  margin-top: $spacing-09;
+  @include landing-page-background;
+}
+
+.landing-page__label {
+  @include type-style('heading-01');
+}
+
+/////
+.landing-page__banner,
+.landing-page__r2,
+.landing-page__r3 {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @include breakpoint-down(md) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.code-snippet {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 16px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+.output-canvas-wrapper {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.center-buttons {
+  display: flex;
+  justify-content: center;
+}
+.full-width-button {
+  width: calc(50% - 10px); /* Subtracting margin */
+  margin: 5px; /* Adjust as needed */
+}
+
+.button-container {
+  flex: 1;
+}
+
+.half-width-button {
+  display: inline-block;
+  width: calc(50% - 10px); /* Subtracting margin */
+  margin: 5px; /* Adjust as needed */
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+}
+.space {
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.bold-label {
+  font-weight: bold;
+}
+
+.text-input-group {
+  margin-bottom: 10px; /* Adjust as needed*/
+}
